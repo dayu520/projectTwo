@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<style>
+		body,li,ul,h2,h3,h4,h5,h6,dl,dd,dt,p{
+			margin:0;
+			padding: 0;
+		}
+		li{
+			list-style: none;
+		}
+		img{
+			vertical-align: middle;
+		}
+		.clear:after{
+			content:"";
+			display: block;
+			clear:both;
+		}
+		.wrap{
+			width:962px;
+			margin:0 auto;
+		}
+		a{
+			text-decoration: none;
+		}
+		header ul>li{
+			float:left;
+		}
+		header ul{
+			width:399px;
+			font:11px "黑体";
+			padding-left: 560px;
+		}
+		header ul>li{
+			position: relative;
+			padding:8px 10px 7px 10px;
+		}
+		header ul>li>a{
+			color:#b5b5b5;
+		}
+		header ul>li>i{
+			display: inline-block;
+			width:1px;
+			height:15px;
+			background:#3d3d3d;
+			position: absolute;
+			top:8px;
+			right:0;
+		}
+		.lf{
+			float: left;
+		}
+		.header_wrap{
+			width:100%;
+			background: #2f2f2f;
+		}
+		.bg_green_diamond{
+			background:url(img/1.png) no-repeat 12px 11px;
+			padding-right: 8px;
+			vertical-align: middle;
+		}
+		.search .left{
+			padding-top: 32px;
+		}
+		.search .right{
+			padding-left: 58px;
+		}		
+		.search .right ul>li{
+			float: left;
+		}
+		.search .right{
+			width:778px;
+			box-sizing: border-box;
+			position: relative;
+		}
+		.search .right .first_list li{
+			font:16px/37px "黑体";
+			color: #000;
+			cursor: pointer;
+			padding:38px 20px 0 20px;	
+			border-radius: 0 0 4px 4px;	
+			border-top: 4px solid transparent;		
+		}
+		.search .right .first_list li:hover{
+			border-top: 4px solid #0dad51;
+		}
+		.search .right .first_list .active{
+			background: #0dad51;
+			color:#fff;
+		}
+		.search .right .first_list  .last_li{
+			position: absolute;
+			right: 0;
+			top:38px;
+			width:228px;
+			height:38px;
+			box-sizing: border-box;
+			padding-top: 0;
+			border-radius: 4px;
+			background: #f0f0f0;
+			border-top: 0;
+		}
+		.search .right .first_list  .last_li:hover{
+			border-top: 0;
+		}
+		.search .right .first_list  .last_li>input{
+			width:220px;
+			height:30px;
+			box-sizing: border-box;
+			padding-left: 10px;
+			position: absolute;
+			top:50%;
+			left: 50%;
+			margin-top:-15px;
+			margin-left: -110px;
+			border-radius: 4px;
+			border:1px solid #c3c3c3;
+		}
+		.search .right .first_list  .last_li>img{
+			cursor: pointer;
+			position: absolute;
+			top:12px;
+			right:10px;
+		}
+		.QQmusic{
+			width: 120px;
+		}
+		.search .right .second_list li{
+			font:12px "黑体";
+			padding:13px 16px 13px 20px;
+			color: #6e6e6e;
+			position: relative;
+			cursor: pointer;
+		}
+		.search .right .second_list li>i{
+			position: absolute;
+			top:15px;
+			right:0;
+			height: 11px;
+			width: 1px;
+			background:#dcc5dc;
+		}
+		.search .right .second_list li.active{
+			color:#0dad51;
+		}
+		.line{
+			width:100%;
+			height:1px;
+			background:#ddd;
+		}
+		.carousel{
+			margin-top: 20px;
+		}
+		.carousel .carousel_right{
+			margin-left: 40px;
+		}
+		.carousel .carousel_right h2{
+			font:30px "微软雅黑";
+			color:#e4e4e4;
+			letter-spacing: 1px;
+		}
+		.carousel .carousel_right button{
+			width:170px;
+			height:45px;
+			border:none;
+			position: relative;
+			font:20px "微软雅黑";
+			cursor: pointer;
+			color: #fff;
+			box-shadow: -2px 2px 8px #ececec;
+			margin-top: 24px;
+			margin-left:25px;
+			margin-bottom: 32px;
+			text-indent: 36px;
+			background:#ffa200;
+		}
+		.carousel .carousel_right button>i{
+			width:31px;
+			height: 31px;
+			position: absolute;
+			top:7px;
+			left:19px;
+			display: inline-block;
+			background: url(img/6.png) no-repeat;
+		}
+		.carousel .carousel_right .carousel_img{
+			position: relative;
+		}
+		.carousel .carousel_right .cast_point {
+			position: absolute;
+			top:95px;
+			left:84px;
+		}
+		.carousel .carousel_right .cast_point li{
+			width:7px;
+			height:7px;
+			float:left;
+			cursor: pointer;
+			margin-right: 8px;
+			border-radius: 50%;
+			background:#e2e2e2;
+		}
+		.carousel .carousel_right .cast_point li.active_point{
+			background:#a0a0a0
+		}
+		.online_starting_lf{
+			width:703px;
+			padding-top: 40px;
+		}
+		.online_starting .title,.mv_first_sowing .title{
+			position: relative;
+			width: 100%;
+			height:30px;		
+		}
+		.online_starting .title i,.mv_first_sowing .title i{
+			float: left;
+			width:5px;
+			height:30px;
+			background:#ff0000;
+			position: absolute;
+			left:0;
+			top:0;
+		}
+		.online_starting .title h2,
+		.mv_first_sowing .title h2{
+			font: normal 26px/30px "微软雅黑";
+			text-indent: 15px;
+		}
+		.online_starting .title h2>span,
+		.mv_first_sowing .title h2>span{
+			font-size:14px;
+			color:#0c8f44;
+			padding-left:12px;
+		}
+		.online_starting .title_img{
+			position: absolute;
+			cursor: pointer;
+			right:0;
+			top:0;
+		}
+		.online_starting .online_starting_items{
+			height: 272px;
+			cursor: pointer;
+			margin-top: 18px;
+			/*display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-content: space-between;
+			justify-content: space-between;*/
+		}
+		.online_starting .online_starting_items li{
+			float: left;
+			padding-right: 10px;
+			padding-bottom: 10px;			
+		}
+		.online_starting .online_starting_items li.clear_pd{
+			padding-bottom: 0;
+		}
+		.online_starting .online_starting_items li.clear_padding{
+			padding-right: 0;
+		}
+		.online_starting .online_starting_items img{
+			width:132px;
+			height:132px;
+		}
+		.online_starting .online_starting_ri{
+			margin-left: 40px;
+			width:219px;
+			position: relative;
+			padding-bottom: 10px;
+			background: url(img/40.png) no-repeat 0 360px;
+		}
+		.online_starting .online_starting_ri h3{
+			font:17px/35px "黑体";
+			color:#8d8d8d;
+			padding-bottom: 5px;
+		}
+		.online_starting .online_starting_ri .option{
+			position: absolute;
+			left: 66px;
+			top:2px;
+		}
+		.online_starting .district_class li{
+			float: left;
+			font: 11px "黑体";
+			cursor: pointer;
+			color: #0c8f44;
+			padding:0 7px 0 8px;
+			position:relative;	
+		}
+		.online_starting .district_class li>i{
+			position:absolute;
+			width:1px;
+			height: 12px;
+			background: #d8d8d8;
+			top:0;
+			right: 0;
+		} 
+		.online_starting .district_class .epidemic_index{
+			color:#333333;
+			padding-left: 0;
+		}
+		.online_starting .online_starting_ri .song_list{
+			margin-top: 18px;
+		}
+		.online_starting .online_starting_ri .song_list>li{
+			padding-left: 0;
+		}
+		.online_starting .online_starting_ri .song_list li{
+			height: 25px;
+			position: relative;
+		}
+		.online_starting .online_starting_ri .song_list li div{
+			float: left;
+			cursor: pointer;
+		}
+		
+		.online_starting .online_starting_ri .song_name{
+			width:104px;
+			font: 12px/25px "黑体";
+			color: #0c8f44;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		.online_starting .online_starting_ri .singer{
+			font:12px/25px "黑体";
+			color:#515151;
+			width:76px;
+			text-align: right;
+		}
+		.online_starting .online_starting_ri .order_number{
+			font:9px/25px "微软雅黑";
+			color: #b2b2b2;
+			width:39px;
+		}
+		.online_starting .online_starting_ri .first_number{
+			font:17px "微软雅黑";
+			color: #ff5400;
+			width:39px;
+		}
+		.online_starting .online_starting_ri .first_song{
+			font:21px "微软雅黑";
+			color: #ff5400;
+			width:86px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		.online_starting .online_starting_ri .first_singer{
+			font:9px "微软雅黑";
+			color:#b2b2b2 ;
+			width:60px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;			
+		}
+		.online_starting .online_starting_ri .first_group{
+			width:116px;
+			padding-left: 10px;
+		}
+		.online_starting .online_starting_ri .song_list li.song_list_first{
+			height: 54px;
+		}
+
+		.first_sowing_lf{
+			padding-top: 38px;	
+		}
+		.mv_first_sowing .sowing_intro{
+			margin-top: 18px;
+			width:703px;
+		}
+		.mv_first_sowing .sowing_intro li{
+			float:left;
+			cursor: pointer;
+			padding-right:19px;
+		}
+		.mv_first_sowing .sowing_intro li.clear_padding{
+			padding-right: 0;
+		}
+		.mv_first_sowing .sowing_name{
+			font:9px/22px "微软雅黑";
+			color:#438f44;
+		}
+		.mv_first_sowing .sowing_name>span{
+			color: #515197;
+		}
+		.mv_first_sowing .sowing{
+			font:11px/25px "微软雅黑";
+			color: #8b8b8b;
+		}
+		.mv_first_sowing .time{
+			width:160px;
+			position: relative;
+			font:9px/22px "微软雅黑";
+			color:#b8a3c8;
+			margin-bottom: 20px;
+		}
+		.mv_first_sowing .time span:last-child{
+			position: absolute;
+			right: 0;
+			top:0;
+		}
+		.mv_first_sowing .first_sowing_ri{
+			margin-left: 40px;
+		}
+		.mv_first_sowing .first_sowing_ri li{
+			float: left;
+			font:12px "黑体";
+			color: #515151;
+		}
+		.first_sowing_ri {
+			width:219px;
+		}
+		.list_name{
+			border-bottom:1px solid #e4e4e4;
+			padding-bottom: 6px;
+			padding-top: 19px;	
+		}
+		.first_sowing_ri li{
+			font:11px "黑体";
+			color: #515151;
+			width:60px;
+			cursor: pointer;
+			padding-right: 19px;
+			padding-bottom: 11px;
+		}
+		.first_sowing_ri li:nth-child(3n+3){
+			padding-right: 0;
+		}
+		.hot_singer {
+			padding-bottom: 2px;
+			background: url(img/40.png) no-repeat 0 246px;
+		}
+		.hot_singer li{
+			width:50px;
+			padding-right: 34px;
+		}
+		.hot_singer h2{
+			font:17px "微软雅黑";
+			color: #8d8d8d;
+			padding-top: 27px;
+			padding-bottom: 19px;
+		}
+		.hot_singer span{
+			font:14px "微软雅黑";
+			color: #2a9d5b;
+			padding-left: 9px;
+		}
+		
+		.hot_singer strong{
+			font:11px/29px "黑体";
+			float: left;
+			color: #0c8f44;
+		}
+		.hot_singer .change_p{
+			padding-bottom: 8px;
+		}
+		.singer_classification{
+			padding-top: 19px;
+			padding-bottom: 10px;
+			border-bottom: 1px solid #e4e4e4;
+		}
+		.singer_classification li{
+			float: left;
+			padding-right: 25px;
+		}
+		.singer_classification li:nth-child(3n+1){
+			width:60px;
+		}
+		.singer_classification li:nth-child(3n+2){
+			width:60px;
+		}
+		.singer_classification li:nth-child(3n+3){
+			width:48px;
+			padding-right:0;
+			color: #515151;
+		}		
+		.recommendation{
+			margin-top: 20px;
+		}
+		.recommendation_lf .latest_recommendation,
+		.recommendation_lf .hottest_recommendation
+		{
+			width:350px;
+			padding-bottom: 14px;
+			border-right:1px solid #e5e5e5;
+		}
+		.recommendation_lf .latest_recommendation .title,
+		.recommendation_lf .hottest_recommendation .title{
+			position: relative;
+		}
+		.recommendation_lf .latest_recommendation .title i,
+		.recommendation_lf .hottest_recommendation .title i{
+			position: absolute;
+			top:0;
+			left: 0;
+			height: 30px;
+			width:5px;
+			background:#0dad51;
+		}
+		.recommendation_lf .latest_recommendation .title h2,
+		.recommendation_lf .hottest_recommendation .title h2{
+			text-indent: 15px;
+			font: normal 26px/30px "微软雅黑";			
+		}
+		.recommendation_lf .latest_recommendation .title .title_img,
+		.recommendation_lf .hottest_recommendation .title .title_img{
+			padding-left: 9px;
+			cursor: pointer;
+		}
+		.recommendation_lf .latest_recommendation .title ul,
+		.recommendation_lf .hottest_recommendation .title ul{
+			padding-left: 17px;
+			height: 30px;
+		}
+		.recommendation_lf .latest_recommendation .title li,
+		.recommendation_lf .hottest_recommendation .title li{
+			float:left;
+			font:11px/30px "黑体";
+		}
+		.recommendation_lf .latest_recommendation .title a,
+		.recommendation_lf .hottest_recommendation .title a{
+			border-right: 1px solid #d8d8d8;
+			padding: 0 8px 0 8px;
+			color:#0c8f44;
+		}
+		.recommendation_lf .latest_recommendation .title a.border_none,
+		.recommendation_lf .hottest_recommendation .title a.border_none{
+			border:none;
+		}
+		.recommendation_lf .latest_recommendation .title a.active,
+		.recommendation_lf .hottest_recommendation .title a.active{
+			color:#333333;
+		}
+		.recommendation_lf .latest_recommendation .list,
+		.recommendation_lf .hottest_recommendation .list{
+			padding-top: 11px;
+		}
+		.recommendation_lf .hottest_recommendation .list{
+			margin-left: 22px;
+		}
+		.recommendation_lf .hottest_recommendation{
+			border-right: none;
+		}
+		.recommendation_lf .latest_recommendation .list li,
+		.recommendation_lf .hottest_recommendation .list li{
+			height: 36px;
+			font:13px/36px "黑体";
+			color:#0c8f44;
+			cursor: pointer;
+		} 
+		.recommendation_lf .latest_recommendation .list li a,
+		.recommendation_lf .hottest_recommendation .list li a
+		{
+			color: #0c8f44;
+			float: left;
+			max-width:218px;
+			overflow: hidden;
+			white-space: normal;
+			text-overflow: ellipsis;
+		}
+		.recommendation_lf .latest_recommendation .list li span,
+		.recommendation_lf .hottest_recommendation .list li span{
+			color: #515151;
+		}
+		.recommendation_ri{
+			margin-left: 40px;
+			padding-bottom: 14px;
+			border-bottom: 1px solid #e4e4e4;
+		}
+		.recommendation_ri img{
+			cursor: pointer;
+		}
+		.recommendation_ri h2{
+			font:18px "微软雅黑";
+			color:#8d8d8d;
+			padding-bottom: 20px;
+		}
+		.recommendation_ri .img_intr{
+			font:12px/23px "黑体";
+			color:#0c8f44;
+			cursor: pointer;
+			padding-bottom: 8px;
+		}
+		.omnibus i{
+			float: left;
+			width:5px;
+			height: 30px;
+			background: #f3508d;
+		}
+		.omnibus .title{
+			margin-bottom: 18px;
+		}
+		.omnibus .title h2{
+			text-indent: 15px;
+			height:30px;
+			font:26px/30px "微软雅黑";
+		} 
+		.photo_lf{	
+			padding-right: 15px;
+		}
+		.photo_lf dt{
+			font:12px/24px "黑体";
+			color:#0c8f44;
+			cursor: pointer;
+		}
+		.photo_lf dd{
+			font:12px/25px "黑体";
+			color:#8b8b8b;
+			cursor: pointer;
+		}
+		.photo_ri{
+			width:429px;
+			padding-bottom:27px ;
+		}
+		.photo_ri li{
+			float: left;
+			width:130px;
+			padding-right: 13px;
+		}
+		.photo_ri strong{
+			font:12px/29px "黑体";
+			color: #0c8f44;
+			float: left;
+			cursor: pointer;
+			padding-bottom: 28px;
+		}
+		.photo_lf img{
+			cursor: pointer;
+		}		
+		.photo_ri img{
+			cursor: pointer;
+		}
+		.footer{
+			margin-top: 93px;
+			background: #f7f7f7;
+			padding-top:35px;
+			width:100%;
+		}
+		.footer .it{
+			width:277px;
+		}
+		.footer .it2{
+			width:115px;			
+		}
+		.footer .second_list{
+			padding-left: 80px;
+			padding-right: 91px;
+		}
+		.footer h3{
+			margin-bottom: 14px;
+			font:bold 16px "微软雅黑";
+			color:#757575;
+		}
+		.footer .it li,.footer .it2 li,.footer .it3 li{
+			font:11px "黑体";
+			color:#666666;
+			float: left;
+			padding-bottom: 16px;
+			padding-right: 19px;
+		}
+	
+		.footer .third{
+			width:297px;
+		}
+		.footer .it3 li{
+			float: left;
+			padding-right: 20px;
+		}	
+		.footer .classification{
+			text-align: center;
+			width:502px;
+			margin: auto;
+		}
+		.footer .classification li i{
+			float: left;
+			width:1px;
+			height: 11px;
+			background: #b68bb6;
+			position: absolute;
+			top:47px;
+			right: 0;
+		}
+		.footer .classification li{
+			float: left;
+			font:12px "黑体";
+			color:#666666;
+			padding-right: 4px;
+			padding-left: 4px;
+			position: relative;
+			padding-top: 46px;
+		}	
+		.copyright{
+			width:298px;
+			font:12px "黑体";
+			color:#666666;
+			margin: auto;
+			padding-top: 13px;
+		}
+		.copyright>span{
+			color:#8b8b8b;
+		}
+		.tenxun{
+			width:234px;
+			margin:auto;
+			color: #666666;
+			font-size: 11px;
+			padding-top: 14px;
+		}
+	</style>
+	<body>
+		<div class="header_wrap">
+			<header class="wrap">
+				<ul class="clear">
+					<li>
+						<a href="#">您还未登录，马上登录</a>
+						<i></i>
+					</li>
+					<li >
+						<a href="#"><img src="img/1.png" alt="" class="bg_green_diamond"/>绿钻</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="#">全民K歌</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="#">QQ演出</a>
+						<i></i>
+					</li>
+					<li>
+						<a href="#">QPlay</a>
+						<i></i>
+					</li>
+				</ul>
+			</header>
+		</div>
+		<div class="search clear wrap">
+				<div class="left lf">
+					<img src="img/2.png" alt="" />
+				</div>
+				<div class="right lf clear">
+					<ul class="first_list clear">
+						<li class="active">音乐馆</li>
+						<li>MV</li>
+						<li>我的音乐</li>
+						<li>下载客户端</li>
+						<li class="last_li">
+							<input type="text" placeholder="找到好音乐"/>
+							<img src="img/3.png" alt="" />
+						</li>
+					</ul>
+					
+					<ul class="second_list">
+						<li class="active">首页<i></i></li>
+						<li>排行榜<i></i></li>
+						<li>歌单广场<i></i></li>
+						<li>电台<i></i></li>
+						<li>歌手<i></i></li>
+						<li>独家首发<i></i></li>
+						<li>专辑</li>
+					</ul>					
+				</div>
+			</div>		
+		<div class="line"></div>
+		<ul  class="wrap carousel clear">
+			<ul class="carousel_left lf">
+				<li>
+					<img src="img/4.png" alt="" />
+				</li>
+			</ul>
+			<div class="carousel_right lf">
+				<div>
+					<h2>发现更多好音乐</h2>
+					<button><i></i>用户登录</button>
+				</div>
+				<ul class="carousel_img">
+					<li>
+						<img src="img/5.png" alt="" />
+					</li>
+					<li>
+						<ul class="cast_point">
+							<li class="active_point"></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</ul>
+		<div class="online_starting clear wrap">
+			<div class="online_starting_lf lf">
+				<div class="title">
+					<i></i>
+					<h2>在线首发<span>/更多</span></h2>
+					<div class="title_img">
+						<img src="img/7.png" alt="" />
+						<img src="img/8.png" alt="" />
+					</div>
+				</div>
+				<ul class="online_starting_items clear">
+					<li>
+						<img src="img/9.png" alt="" />
+					</li>
+					<li>
+						<img src="img/10.png" alt="" />
+					</li>
+					<li>
+						<img src="img/11.png" alt="" />
+					</li>
+					<li>
+						<img src="img/12.png" alt="" />
+					</li>
+					<li class="clear_padding">
+						<img src="img/13.png" alt="" />
+					</li>
+					<li class="clear_pd">
+						<img src="img/14.png" alt="" />
+					</li>
+					<li class="clear_pd">
+						<img src="img/15.png" alt="" />
+					</li>
+					<li class="clear_pd">
+						<img src="img/16.png" alt="" />
+					</li>
+					<li class="clear_pd">
+						<img src="img/17.png" alt="" />
+					</li>
+					<li class="clear_padding clear_pd">
+						<img src="img/18.png" alt="" />
+					</li>
+				</ul>
+			</div>
+			<div class="online_starting_ri lf">
+				<div>
+					<h3>
+						巅峰榜 	
+					</h3>
+					<div class="option">
+						<img src="img/19.png" alt="" />
+					 	<img src="img/20.png" alt="" />
+					</div>
+				</div>
+				<ul class="district_class clear">
+					<li class="epidemic_index">流行指数<i></i></li>
+					<li>内地<i></i></li>
+					<li>港台<i></i></li>
+					<li>欧美<i></i></li>
+					<li>韩国</li>
+				</ul>
+				<ul class="song_list">
+					<li class="song_list_first">
+						<div class="first_number">
+							<span>01.</span>
+						</div>
+						<div>
+							<img src="img/21.png" alt="" />
+						</div>
+						<div class="first_group">
+							<span class="first_song">来自天...</span>
+							<div class="first_singer">G.E.M邓...</div>
+						</div>
+					</li>
+					<li>
+						<div class="order_number">
+							<span>02、</span>
+						</div>
+						<div class="song_name">
+							<span>Bad Girl</span>
+						</div>
+						<div class="singer">
+							<span>吴亦凡</span>
+						</div>						
+					</li>
+					<li>
+						<div class="order_number">
+							<span>03、</span>
+						</div>						
+						<div class="song_name">
+							<span>盲点</span>
+						</div>
+						<div class="singer">
+							<span>G.E.M邓...</span>
+						</div>
+					</li>
+					<li>
+						<div class="order_number">
+							<span>04</span>
+						</div>						
+						<div class="song_name">
+							<span>他们说(《龙门镖...</span>
+						</div>
+						<div class="singer">
+							<span>张靓颖</span>
+						</div>
+					</li>
+					<li>
+						<div class="order_number">
+							<span>05</span>
+						</div>						
+						<div class="song_name">
+							<span>壁咚(未完成)</span>
+						</div>
+						<div class="singer">
+							<span>孙子涵</span>
+						</div>
+					</li>
+					<li>
+						<div class="order_number">
+							<span>06</span>
+						</div>						
+						<div class="song_name">
+							<span>I‘ll Show You</span>
+						</div>
+						<div class="singer">
+							<span>Justin Bie</span>
+						</div>
+					</li>
+					<li>
+						<div class="order_number">
+							<span>07</span>
+						</div>						
+						<div class="song_name">
+							<span>青春快乐(《从天...</span>
+						</div>
+						<div class="singer">
+							<span>张艺兴</span>
+						</div>
+					</li>
+					<li>
+						<div class="order_number">
+							<span>08</span>
+						</div>						
+						<div class="song_name">
+							<span>痛快的哀艳</span>
+						</div>
+						<div class="singer">
+							<span>苏打绿</span>
+						</div>
+					</li>
+					<li>
+						<div class="order_number">
+							<span>09</span>
+						</div>						
+						<div class="song_name">
+							<span>远在眼前的你</span>
+						</div>
+						<div class="singer">
+							<span>王心凌</span>
+						</div>
+					</li>
+					<li>
+						<div class="order_number">
+							<span>10</span>
+						</div>						
+						<div class="song_name">
+							<span>陪你长大(《三个...</span>
+						</div>
+						<div class="singer">
+							<span>田雷</span>
+						</div>
+					</li>
+				</ul>
+			</div> 
+		</div>
+		<div class="mv_first_sowing clear wrap">
+			<div class="first_sowing_lf lf">
+				<div class="title">
+					<i></i>
+					<h2>MV首播<span>/更多</span></h2>
+				</div>
+				<ul class="sowing_intro clear">
+				<li>
+					<img src="img/22.png" alt="" />
+					<div class="sowing_name">Just Do It Now <span>-SEIKIN</span></div>
+					<div class="sowing">YouTube人气红人出道了惹</div>
+					<div class="time">
+						<img src="img/30.png" alt="" />
+						<span>0</span>
+						<span>2015-11-09</span>
+					</div>
+				</li>
+				<li>
+					<img src="img/23.png" alt="" />
+					<div class="sowing_name">Love Me Like You Do <span>-Ellie</span></div>
+					<div class="sowing">钢琴弦乐版《五十度灰》主...</div>
+					<div class="time">
+						<img src="img/30.png" alt="" />
+						<span>0</span>
+						<span>2015-11-09</span>
+					</div>					
+				</li>
+				<li>
+					<img src="img/24.png" alt="" />
+					<div class="sowing_name">So I Coule Find My Way <span>-E...</span></div>
+					<div class="sowing">不老女神永恒的天籁之音</div>
+					<div class="time">
+						<img src="img/30.png" alt="" />
+						<span>1213</span>
+						<span>2015-11-07</span>
+					</div>					
+				</li>
+				<li class="clear_padding">
+					<img src="img/25.png" alt="" />
+					<div class="sowing_name">Lay It All On Me<span>-Rudi</span></div>
+					<div class="sowing">记录下众人的生活百态</div>
+					<div class="time">
+						<img src="img/30.png" alt="" />
+						<span>1008</span>
+						<span>2015-11-06</span>
+					</div>					
+				</li>
+				<li>
+					<img src="img/26.png" alt="" />
+					<div class="sowing_name">Just Do It Now <span>-SEIKIN</span></div>
+					<div class="sowing">YouTube人气红人出道了惹</div>
+					<div class="time">
+						<img src="img/30.png" alt="" />
+						<span>0</span>
+						<span>2015-11-09</span>
+					</div>					
+				</li>
+				<li>
+					<img src="img/27.png" alt="" />
+					<div class="sowing_name">Just Do It Now <span>-SEIKIN</span></div>
+					<div class="sowing">YouTube人气红人出道了惹</div>
+					<div class="time">
+						<img src="img/30.png" alt="" />
+						<span>0</span>
+						<span>2015-11-09</span>
+					</div>					
+				</li>
+				<li>
+					<img src="img/28.png" alt="" />
+					<div class="sowing_name">Just Do It Now <span>-SEIKIN</span></div>
+					<div class="sowing">YouTube人气红人出道了惹</div>
+					<div class="time">
+						<img src="img/30.png" alt="" />
+						<span>0</span>
+						<span>2015-11-09</span>
+					</div>					
+				</li>
+				<li class="clear_padding">
+					<img src="img/29.png" alt="" />
+					<div class="sowing_name">Just Do It Now <span>-SEIKIN</span></div>
+					<div class="sowing">YouTube人气红人出道了惹</div>
+					<div class="time"> 
+						<img src="img/30.png" alt="" />
+						<span>0</span>
+						<span>2015-11-09</span>
+					</div>					
+				</li>
+				</ul>						
+			</div>
+			<div class="first_sowing_ri lf">
+				<ul  class="list_name clear">
+					<li>iTunes榜</li>
+					<li>美国公告牌</li>
+					<li>英国UK榜</li>
+					<li>Channel[V]</li>
+					<li>日本公信榜</li>
+					<li>韩国MNET</li>
+					<li>英国UK榜</li>
+					<li>香港电台榜</li>
+					<li>MTV光荣榜</li>
+				</ul>
+				<div class="hot_singer">
+					<h2>热门歌手<span>/更多</span></h2>
+					<ul class="clear">
+						<li>
+							<img src="img/41.png" alt="" />
+							<strong>G.E.M...</strong>
+						</li>
+						<li>
+							<img src="img/42.png" alt="" />
+							<strong>周杰伦</strong>
+						</li>
+						<li>
+							<img src="img/43.png" alt="" />
+							<strong>BIGBA...</strong>
+						</li>
+						<li class="change_p">
+							<img src="img/44.png" alt="" />
+							<strong>陈奕迅</strong>
+						</li>
+						<li class="change_p">
+							<img src="img/45.png" alt="" />
+							<strong>林俊杰</strong>
+						</li>
+						<li  class="change_p">
+							<img src="img/46.png" alt="" />
+							<strong>鹿晗</strong>
+						</li>
+					</ul>
+				</div>
+				<ul class="clear singer_classification">
+					<li>华语男歌手</li>
+					<li>华语女歌手</li>
+					<li>华语组合</li>
+					<li>日韩男歌手</li>
+					<li>日韩女歌手</li>
+					<li>日韩组合</li>
+					<li>欧美男歌手</li>
+					<li>欧美女歌手</li>
+					<li>欧美组合</li>
+				</ul>
+			</div>
+		</div>		
+	<div class="clear wrap recommendation">
+		<div class="clear recommendation_lf lf">
+			<div class="latest_recommendation lf">
+				<div class="title clear">
+					<i></i>
+					<h2 class="lf">最新推荐</h2>
+					<div class="title_img lf">
+						<img src="img/19.png" alt="" />
+						<img src="img/20.png" alt="" />
+					</div>
+					<div class="lf">
+						<ul>
+							<li><a href="#" class="active">华语</a></li>
+							<li><a href="#">韩语</a></li>
+							<li><a href="#" class="border_none">欧美</a></li>
+					    </ul>
+					</div>
+				</div>
+				<ul class="list">
+					<li><a href="#">我是你的Lover</a><span>-吴莫愁</span></li>
+					<li><a href="#">查克靠近</a><span>-G.E.M.邓...</span></li>
+					<li><a href="#">我们不懂</a><span>-苏打绿</span></li>
+					<li><a href="#">远在眼前的你</a><span>-王心凌</span></li>
+					<li><a href="#">诺言</a><span>-鹿晗</span></li>
+					<li><a href="#">葡萄</a><span>-韩红</span></li>
+					<li><a href="#">满</a><span>-汪峰</span></li>
+					<li><a href="#">山河故人(《山河故人》电影同名...)</a><span>-李宇春</span></li>
+					<li><a href="#">让</a><span>-萧煌奇</span></li>
+					<li><a href="#">一次就好(《夏洛特烦恼》电影暖...)</a><span>-杨宗纬</span></li>
+					<li><a href="#">只要有你的地方(《消失的爱人》)...</a><span>林俊杰</span></li>
+					<li><a href="#">奇迹</a><span>-李琦</span></li>
+				</ul>
+			</div>
+			<div class="hottest_recommendation lf">
+				<div class="title clear">
+					<i></i>
+					<h2 class="lf">最热推荐</h2>
+					<div class="title_img lf">
+						<img src="img/19.png" alt="" />
+						<img src="img/20.png" alt="" />
+					</div>
+					<div class="lf">
+						<ul>
+							<li><a href="#" class="active">华语</a></li>
+							<li><a href="#">韩语</a></li>
+							<li><a href="#" class="border_none">欧美</a></li>
+					    </ul>
+					</div>
+				</div>
+				<ul class="list">
+					<li><a href="#">我是你的Lover</a><span>-吴莫愁</span></li>
+					<li><a href="#">查克靠近</a><span>-G.E.M.邓...</span></li>
+					<li><a href="#">我们不懂</a><span>-苏打绿</span></li>
+					<li><a href="#">远在眼前的你</a><span>-王心凌</span></li>
+					<li><a href="#">诺言</a><span>-鹿晗</span></li>
+					<li><a href="#">葡萄</a><span>-韩红</span></li>
+					<li><a href="#">满</a><span>-汪峰</span></li>
+					<li><a href="#">山河故人(《山河故人》电影同名...)</a><span>-李宇春</span></li>
+					<li><a href="#">让</a><span>-萧煌奇</span></li>
+					<li><a href="#">一次就好(《夏洛特烦恼》电影暖...)</a><span>-杨宗纬</span></li>
+					<li><a href="#">只要有你的地方(《消失的爱人》)...</a><span>林俊杰</span></li>
+					<li><a href="#">奇迹</a><span>-李琦</span></li>
+				</ul>
+							
+			</div>			
+		</div>
+		<div class="recommendation_ri lf">
+			<h2 class="lf">精彩活动</h2>
+			<div>
+				<img src="img/31.png" alt="" />
+				<div class="img_intr">[精彩活动]友情岁月深圳站</div>
+			</div>
+			<div>
+				<img src="img/32.png" alt="" />
+				<div class="img_intr">[精彩活动]巅峰对决第四期</div>
+			</div>			
+		</div>
+	</div>
+	<div class="omnibus  wrap">
+		<div class="title">
+			<i></i>
+			<h2>精选集</h2>
+		</div>
+		<div class="photo clear">
+			<div class="photo_lf lf">
+				<img src="img/33.png" alt="" />
+				<dl>
+					<dt>MV精选</dt>
+					<dd>音乐抚慰青春之痛，追忆那时的蜜语甜言</dd>
+				</dl>
+			</div>
+			<ul class="photo_ri clear lf">
+				<li>
+					<img src="img/34.png" alt="" />
+					<strong>相恋跨越时空</strong>
+				</li>
+				<li>
+					<img src="img/35.png" alt="" />
+					<strong>一枝独秀更耀眼</strong>
+				</li>
+				<li>
+					<img src="img/36.png" alt="" />
+					<strong>音乐和短裙最配</strong>
+				</li>
+				<li>
+					<img src="img/37.png" alt="" />
+					<strong>音乐时尚两不误</strong>
+				</li>
+				<li>
+					<img src="img/38.png" alt="" />
+					<strong>好的歌手会搞怪</strong>
+				</li>
+				<li>
+					<img src="img/39.png" alt="" />
+					<strong>静享一曲中国风</strong>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+		<ul class="clear wrap">
+			<li class="lf">
+				<h3>软件下载</h3>
+				<ul class="it clear">
+					<li>PC版</li>
+					<li>iPhone客户端</li>
+					<li>iPad客户端</li>
+					<li>MAC版</li>
+					<li>Android客户端</li>
+					<li>Android Pad客户端</li>
+					<li>Windows8版</li>
+					<li>Windows Phone版</li>
+				</ul>
+			</li>
+			<li class="lf second_list">
+				<h3>特色产品</h3>
+				<ul class="it2 clear">
+					<li>车载互联</li>
+					<li>QPlay</li>
+					<li class="QQmusic">QQ音乐原创音乐平台</li>
+				</ul>
+			</li>
+			<li class="lf third">
+				<h3>友情链接</h3>
+				<ul class="it3 clear">
+					<li>手机QQ空间</li>
+					<li>最新版QQ</li>
+					<li>腾讯视频</li>
+					<li>电脑管家</li>
+					<li>QQ浏览器</li>
+					<li>兴趣部落</li>
+					<li>腾讯云论坛</li>
+				</ul>				
+			</li>
+		</ul>
+		<ul class="classification clear">
+			<li>关于腾讯<i></i></li>
+			<li>About Tencent<i></i></li>
+			<li>服务条款<i></i></li>
+			<li>用户服务协议<i></i></li>
+			<li>广告服务<i></i></li>
+			<li>腾讯招聘<i></i></li>
+			<li>客服中心<i></i></li>
+			<li>网站导航<i></i></li>
+		</ul>
+		<p class="copyright"><span>Copyright&copy;1998-2015 Tencent.</span>All Rights Reserved.</p>
+		<p class="tenxun"><span>腾讯公司</span>版权所有腾讯网络文化经营许可证</p>
+	</div>
+		
+	</body>
+</html>
